@@ -1,0 +1,10 @@
+# Employee records
+
+- cluster-1:
+      - service-1: 1		
+      - service-2: 1
+
+- cluster-2:
+      - service-3: 2
+      - servie-4: 1
+      - service-5: 1
