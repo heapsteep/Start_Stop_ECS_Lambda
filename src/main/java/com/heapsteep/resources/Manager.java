@@ -11,12 +11,25 @@ import java.util.Map;
 
 import org.yaml.snakeyaml.Yaml;
 
+/*This class is for Testing */
 public class Manager {
+	
+	public void test() {
+		Yaml yaml=new Yaml();
+		InputStream is = this.getClass().getClassLoader().getResourceAsStream("application.yaml");
+		Object obj=yaml.load(is);
+		System.out.println(obj);
+	}
 	public static void main(String[] args) throws IOException{
+		//new Manager().test();
 				
 		Yaml yaml=new Yaml();
-		String path=".\\src\\main\\java\\com\\heapsteep\\resources\\application.yaml";
-		Object obj=yaml.load(new FileInputStream(new File(path)));
+		//String path=".\\src\\main\\java\\com\\heapsteep\\resources\\application.yaml";
+		//Object obj=yaml.load(new FileInputStream(new File(path)));
+		//InputStream is=ClassLoader.getSystemResourceAsStream("application.yaml");
+		InputStream is=Manager.class.getClassLoader().getResourceAsStream("application.yaml");		
+		Object obj=yaml.load(is);
+		
 		System.out.println(obj);
 		List fullList=(ArrayList)obj;
 				
