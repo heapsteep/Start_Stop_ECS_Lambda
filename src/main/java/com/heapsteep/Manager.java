@@ -20,7 +20,7 @@ public class Manager {
 		Object obj=yaml.load(is);
 		System.out.println(obj);
 	}
-	public static void main(String[] args) throws IOException{
+	public static void main(String[] args) throws IOException{ 
 		//new Manager().test();
 				
 		Yaml yaml=new Yaml();
