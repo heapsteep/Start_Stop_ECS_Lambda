@@ -69,35 +69,11 @@ public class App implements RequestHandler<Object,Object>{
 					        LOGGER.info("===>Message:" + response.getService().getEvents().get(3).getMessage());
 					        					       
 					        finalMessage= "*******All ECS Services are Started as part of Weekday Startup*******";
-						}
-						
+						}						
 					}
 				}
 			}  		
-	    }
-		
-		
-		
-				
-		/*if(resourceArr[1].equals("Stop_ECS")) {
-			//AmazonECS client=AmazonECSClientBuilder.standard().withRegion("ap-south-1").build();
-	        UpdateServiceRequest request=new UpdateServiceRequest().withCluster("heapsteep-cluster-3").withService("heapsteep-service-3").withDesiredCount(0);
-	        
-	        UpdateServiceResult response=client.updateService(request);	       
-	        LOGGER.info("===>Message:" + response.getService().getEvents().get(3).getMessage());
-	        
-	        LOGGER.info("*******All ECS Services are Stopped as part of Weekend Shutdown********");
-			return "All ECS Services are Stopped as part of Weekend Shutdown";			
-		}else if(resourceArr[1].equals("Start_ECS")) {
-			//AmazonECS client=AmazonECSClientBuilder.standard().withRegion("ap-south-1").build();
-	        UpdateServiceRequest request=new UpdateServiceRequest().withCluster("heapsteep-cluster-3").withService("heapsteep-service-3").withDesiredCount(2);
-	        
-	        UpdateServiceResult response=client.updateService(request);			
-	        LOGGER.info("===>Message:" + response.getService().getEvents().get(3).getMessage());
-	        
-	        LOGGER.info("*******All ECS Services are Started as part of Weekday Startup*******");
-			return "All ECS Services are Started as part of Weekday Startup";			
-		}*/	
+	    }					
 		LOGGER.info(finalMessage);
 		return finalMessage;
 	}
