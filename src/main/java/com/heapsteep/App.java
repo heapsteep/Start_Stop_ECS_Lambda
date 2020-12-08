@@ -20,7 +20,7 @@ import com.amazonaws.services.ecs.model.UpdateServiceRequest;
 import com.amazonaws.services.ecs.model.UpdateServiceResult;
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
-import com.heapsteep.resources.Manager;
+
 
 public class App implements RequestHandler<Object,Object>{
 	private final static Logger LOGGER = Logger.getLogger(App.class.getName());
